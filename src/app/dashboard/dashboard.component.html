@@ -1,0 +1,36 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>device_thermostat</mat-icon>
+    </button>
+    <span>Sensor DHT 11</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon>rocket_launch</mat-icon>
+    </button>
+</mat-toolbar>
+<br>
+<h1 style="text-align: center;">Real-Time communication MQTT between ESP32 and AWS IOT</h1>
+<br>
+<div class="dashboard-container">
+    <mat-card class="col-2" style="height: fit-content;">
+        <mat-card-content>
+            <div>
+                <h3 style="text-align: center;">Spline Temperature and Humidity</h3>
+            </div>
+            <div class="chart-container">
+                <canvas id="MyChart">{{ chart }}</canvas>
+            </div>
+        </mat-card-content>
+    </mat-card>
+    <mat-card class="col-2" style="height: fit-content;">
+        <mat-card-content>
+            <div>
+                <h3 style="text-align: center;">Temperature (°C)</h3>
+            </div>
+            <div class="temperature-container">
+                <app-temperature [temp]="temperature"></app-temperature>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>
+<app-footer></app-footer>

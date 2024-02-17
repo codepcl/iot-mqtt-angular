@@ -1,0 +1,29 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.dashboard-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-evenly;
+}
+
+.col {
+    padding-left: 10px;
+    padding-right: 10px;
+
+    @media (min-width: 1200px) {
+        width: 25%;
+    }
+}
+
+.col-2 {
+    padding-left: 10px;
+    padding-right: 10px;
+
+    @media (min-width: 1200px) {
+        width: 40%;
+    }
+}
